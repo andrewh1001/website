@@ -1,10 +1,10 @@
 ---
 title: "Weighted Branch Aggregation"
 collection: publications
-permalink: /publication/2024-05-11-
+permalink: /publication/2024-05-11-wba
 excerpt: 'Track detection for autonomous racing'
 date: 2024-05-11
-venue: 'Tiny Papers @ ICLR 2024 Notable'
+venue: 'Tiny Papers @ ICLR 2024'
 paperurl: '/files/weighted_branch_aggregation_ba.pdf'
 citation: 'N/A'
 ---
