@@ -73,27 +73,20 @@ author_profile: true
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-    // Initialize the map
     const map = L.map('map').setView([24.9783, 121.5395], 13); // Centered at Eiffel Tower
-
-    // Add a tile layer (OpenStreetMap)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Example places with names, coordinates, reviews, and ratings
     const places = [
         { coord: "24.96846048111759, 121.54341514418128", name: "Pooz噗滋手工窯烤披薩", review: "Great Pizza for the price. Ordered a margherita pizza. Awesome service.", rating: 5, picture: "/images/bio-photo.jpg" },
     ];
 
-    // Store markers in an array to reference them later
     const markers = [];
 
-    // Add markers and generate list items for visited places
     const placeList = document.getElementById('place-list');
 
     function renderPlaces(filterText = '', minRating = 0) {
-      // Clear existing list items
       placeList.innerHTML = '';
 
       places
@@ -101,30 +94,25 @@ author_profile: true
           place.name.toLowerCase().includes(filterText.toLowerCase()) && place.rating >= minRating
         )
         .forEach((place, index) => {
-          // Add marker to the map
           if (!markers[index]) {
             const marker = L.marker([Number(place.coord.split(',')[0]), Number(place.coord.split(',')[1])]).addTo(map);
             marker.bindPopup(`<h3>${place.name}</h3><p>${place.review}</p><p>Rating: ${'⭐'.repeat(place.rating)}</p>`);
             markers[index] = marker;
           }
 
-          // Create a list item for each place
           const listItem = document.createElement('li');
           listItem.textContent = place.name;
           listItem.classList.add('visited-place');
           listItem.onclick = () => {
-            // Zoom into the marker and open the popup when the list item is clicked
             map.setView([Number(place.coord.split(',')[0]), Number(place.coord.split(',')[1])], 15);
             markers[index].openPopup();
 
             const contentDiv = document.getElementById('content');
             const existingImage = contentDiv.querySelector('.place-image');
 
-            // If the image is already shown, hide it
             if (existingImage) {
               contentDiv.removeChild(existingImage);
             } else {
-              // Otherwise, show the image
               const image = document.createElement('img');
               image.src = place.picture;
               image.className = 'place-image';
@@ -132,28 +120,22 @@ author_profile: true
             }
           };
 
-          // Add star ratings to the list item
           const stars = document.createElement('span');
           stars.className = 'stars';
           stars.textContent = '⭐'.repeat(place.rating);
           listItem.appendChild(stars);
 
-          // Add the list item to the list
           placeList.appendChild(listItem);
         });
     }
 
-    // Render all places initially
     renderPlaces();
 
-    // Add search functionality
     const searchInput = document.getElementById('search');
     searchInput.addEventListener('input', () => {
       renderPlaces(searchInput.value);
     });
 
-    // Add filter functionality by rating
-    // (Optional: You could add a dropdown or slider to filter by rating dynamically.)
   </script>
 </body>
 </html>
