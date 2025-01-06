@@ -16,46 +16,76 @@ author_profile: true
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     body {
-      margin: 0;
-      display: flex;
+    margin: 0;
+    display: flex;
+    flex-direction: row; /* Default layout: side-by-side */
+  }
+  #map {
+    width: 50%;
+    height: 600px; /* Fixed height for the map */
+  }
+  #content {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li.visited-place {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  li.visited-place:hover {
+    background-color: #f0f0f0;
+  }
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  .stars {
+    color: gold;
+    margin-left: 10px;
+  }
+  .place-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* Responsive styles for small screens */
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column; /* Stack map and content vertically */
     }
     #map {
-      width: 50%; /* 50% of the screen width */
-      height: 600px; /* Fixed height for the map */
+      width: 100%;
+      height: 300px; /* Smaller height for mobile */
     }
     #content {
-      width: 50%; /* 50% of the screen width */
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: auto;
+      width: 100%;
+      padding: 10px; /* Reduce padding for smaller screens */
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+  }
+
+  /* Fine-tune for extra small screens (like phones) */
+  @media (max-width: 480px) {
     li.visited-place {
-      cursor: pointer;
-      padding: 5px;
-      border: 1px solid #ccc;
-      margin-bottom: 5px;
-      border-radius: 5px;
-      transition: background-color 0.2s;
+      font-size: 14px; /* Smaller font for list items */
     }
-    li.visited-place:hover {
-      background-color: #f0f0f0;
+    .search-bar label {
+      display: block;
+      margin-bottom: 5px; /* Stack label above input */
     }
-    .search-bar {
-      margin-bottom: 20px;
+    #content {
+      font-size: 14px; /* Adjust overall font size */
     }
-    .stars {
-      color: gold;
-      margin-left: 10px;
-    }
-    .place-image {
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px;
-    }
+  }
   </style>
 </head>
 <body>
@@ -79,7 +109,16 @@ author_profile: true
     }).addTo(map);
 
     const places = [
-        { coord: "24.96846048111759, 121.54341514418128", name: "Pooz噗滋手工窯烤披薩", review: "Great Pizza for the price. Ordered a margherita pizza. Awesome service.", rating: 5, picture: "/images/bio-photo.jpg" },
+      {% for place in site.data.places %}
+        {
+          coord: "{{ place.coord }}",
+          name: "{{ place.name }}",
+          date: "{{ place.date }}",
+          review: "{{ place.review }}",
+          rating: {{ place.rating }},
+          picture: "{{ place.picture }}"
+        }{% if forloop.last == false %},{% endif %}
+      {% endfor %}
     ];
 
     const markers = [];
@@ -96,7 +135,7 @@ author_profile: true
         .forEach((place, index) => {
           if (!markers[index]) {
             const marker = L.marker([Number(place.coord.split(',')[0]), Number(place.coord.split(',')[1])]).addTo(map);
-            marker.bindPopup(`<h3>${place.name}</h3><p>${place.review}</p><p>Rating: ${'⭐'.repeat(place.rating)}</p>`);
+            marker.bindPopup(`<h3>${place.name}</h3><p>${place.date}</p><p>${place.review}</p><p>Rating: ${'⭐'.repeat(place.rating)}</p>`);
             markers[index] = marker;
           }
 
