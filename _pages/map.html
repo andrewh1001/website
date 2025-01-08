@@ -18,11 +18,11 @@ author_profile: true
     body {
     margin: 0;
     display: flex;
-    flex-direction: row; /* Default layout: side-by-side */
+    flex-direction: row;
   }
   #map {
     width: 50%;
-    height: 600px; /* Fixed height for the map */
+    height: 600px;
   }
   #content {
     width: 50%;
@@ -58,32 +58,30 @@ author_profile: true
     margin-top: 20px;
   }
 
-  /* Responsive styles for small screens */
   @media (max-width: 768px) {
     body {
-      flex-direction: column; /* Stack map and content vertically */
+      flex-direction: column;
     }
     #map {
       width: 100%;
-      height: 300px; /* Smaller height for mobile */
+      height: 300px; 
     }
     #content {
       width: 100%;
-      padding: 10px; /* Reduce padding for smaller screens */
+      padding: 10px; 
     }
   }
 
-  /* Fine-tune for extra small screens (like phones) */
   @media (max-width: 480px) {
     li.visited-place {
-      font-size: 14px; /* Smaller font for list items */
+      font-size: 14px; 
     }
     .search-bar label {
       display: block;
-      margin-bottom: 5px; /* Stack label above input */
+      margin-bottom: 5px; 
     }
     #content {
-      font-size: 14px; /* Adjust overall font size */
+      font-size: 14px; 
     }
   }
   </style>

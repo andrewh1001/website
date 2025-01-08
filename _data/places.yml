@@ -4,3 +4,11 @@
   review: "Although it may not be the most authentic pizza, it's a great Pizza for the price. Ordered a margherita pizza. The owner is very enthusiastic and passionate."
   rating: 5
   picture: "/images/bio-photo.jpg"
+
+- coord: "25.01111080124766, 121.4645662687562"
+  name: "くら寿司 藏壽司 板橋中山遠百店"
+  date: "2025/01/07"
+  review: "Run of the mill conveyor belt sushi. They got an interesting gimmick where you have a chance of getting a prize for every 5 plates. Got pretty lucky and won a cool little prize."
+  rating: 4
+  picture: "/images/kura_prize.jpg"
+  
