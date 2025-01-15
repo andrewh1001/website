@@ -25,4 +25,41 @@
   review: "Mediocre dim sum. Some of the dishes such as the pork bun leaves much to be desired."
   rating: 3
   picture: ""
+
+- coord: "22.33862624140393, 114.18853173440739"
+  name: "聯合興"
+  date: "2025/01/11"
+  review: ""
+  rating: 3
+  picture: ""
+
+- coord: "22.284167586859184, 114.15677701227304"
+  name: "華豐燒臘"
+  date: "2025/01/11"
+  review: "叉燒煎蛋飯"
+  rating: 5
+  picture: ""
+
+- coord: "22.306935220777152, 114.17011835596377"
+  name: "亞龍咖哩"
+  date: "2025/01/12"
+  review: "咖哩牛腩. Personally feel like it's too spicy."
+  rating: 4
+  picture: "/images/1-12-curry.jpg"
+
+- coord: "22.285710450923684, 114.15606740621897"
+  name: "快樂蜂（袓樂比）Jollibee"
+  date: "2025/01/12"
+  review: "Decent chicken"
+  rating: 4
+  picture: "/images/1-12-jollibee.jpg"
+
+- coord: "25.009475964937398, 121.46610468969494"
+  name: "區運越南河粉美食"
+  date: "2025/01/14"
+  review: "烤香茅排骨飯"
+  rating: 3
+  picture: ""
+
+
   
