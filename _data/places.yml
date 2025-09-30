@@ -87,7 +87,19 @@
   date: "2025/09/20"
   review: "Indian Lunch Buffet. The food was decent but felt like it was Americanized. The total was around 19 dollars after tax and tip."
   rating: 4
-  picture: ""
+  picture: "/images/20250920_buffet.jpg"
 
-  
+- coord: "42.271807957958785, -83.74089277193912"
+  name: "Baba Dari Mediterranean Grill"
+  date: "2025/09/26"
+  review: "Ordered the beef shawarma wrap. The beef was tough and dry. Might try the chicken next time"
+  rating: 3
+  picture: "/images/20250926_shawarma.jpg"
+
+- coord: "42.278008459835, -83.74109185704532"
+  name: "Pita Kabob Grill"
+  date: "2025/09/27"
+  review: "Had the chicken shawarma wrap. It was surprisingly good with the mashed potatoes inside. Could be more refreshing with lettuce substitute instead."
+  rating: 4
+  picture: "/images/20250927_wrap.jpg"  
   
