@@ -21,18 +21,18 @@ repository               : "andrewh1001.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "bio-photo.jpg"
+  avatar           : "bio.jpg"
   name             : "Ching-Hsiang (Andrew) Huang"
   pronouns         : # example: "she  /her"  
   bio              : "Electrical & Computer Engineering"
   location         : "US"
-  employer         : "Purdue / U-M"
+  employer         : "Purdue / UofM"
   uri              : # URL
   email            : "huangchs@umich.edu" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : # "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=c3tyknQAAAAJ&hl=en"
   impactstory      : # URL
   orcid            : # "http://orcid.org/yourorcidurl"
   semantic         : # URL
@@ -57,7 +57,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "ching-hsiang-huang-74bba0224"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
