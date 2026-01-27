@@ -2,9 +2,7 @@
 title: "Senior Design - Lane Wizard"
 excerpt: "Lane Wizard is an autonomous vehicle prototype"
 collection: portfolio
-
 ---
-
 Lane Wizard is an autonomous driving prototype with custom built lane detection model. The camera captures real time images of the lane, and the lane detection model on the Jetson Nano predicts the lane and calculates and communicates speed and turning angle to the microcontroller, which in turn controls the motor and servo motor.
 
 ![Spark Challenge](/images/senior_design_thumbnail.jpg)
@@ -52,9 +50,8 @@ Stretch goals included a custom discrete H-bridge design and a Bluetooth-based w
 
   <videowidth="800"controls>
 
-    <sourcesrc="/images/senior_design/Team 1 - Final Presentation Video.mp4"type="video/mp4">
-
-</video>
+  <source src="/images/senior_design/Team 1 - Final Presentation Video.mp4" type="video/mp4">
+  </video>
 
 ![PCB Design](/images/senior_design/pcb_fullv2.png)
 
