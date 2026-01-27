@@ -48,9 +48,8 @@ Stretch goals included a custom discrete H-bridge design and a Bluetooth-based w
 
 -**Demo Video:**
 
-  <videowidth="800"controls>
-
-  <source src="/images/senior_design/Team 1 - Final Presentation Video.mp4" type="video/mp4">
+  <video width="800" controls>
+    <source src="/images/senior_design/Team 1 - Final Presentation Video.mp4" type="video/mp4">
   </video>
 
 ![PCB Design](/images/senior_design/pcb_fullv2.png)
