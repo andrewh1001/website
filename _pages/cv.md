@@ -11,10 +11,13 @@ redirect_from:
 ## EDUCATION
 
 **Master of Science in Electrical & Computer Engineering**
+
 (Signal and Image Processing and Machine Learning)
+
 University of Michigan, Ann Arbor, MI (Expected Aug 2027)
 
 **Bachelor of Science in Computer Engineering with Distinction**
+
 Purdue University, West Lafayette, IN (Dec 2024)
 
 ---
