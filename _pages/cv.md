@@ -11,6 +11,7 @@ redirect_from:
 ## EDUCATION
 
 **Master of Science in Electrical & Computer Engineering**
+(Signal and Image Processing and Machine Learning)
 University of Michigan, Ann Arbor, MI (Expected Aug 2027)
 
 **Bachelor of Science in Computer Engineering with Distinction**
@@ -20,34 +21,48 @@ Purdue University, West Lafayette, IN (Dec 2024)
 
 ## RESEARCH EXPERIENCE
 
+### Researcher
+
+*LASER (Life-cycle Assessment Synthesized with Ecosystems and Risk), University of Michigan*
+
+Aug 2025 - Present
+
+* Designed and trained a fully convolutional neural network (FCN) for biomass prediction from multi-source satellite imagery using PyTorch and Rasterio
+* Developed CNN encoders for multichannel image patches and residual MLPs for tabular feature fusion
+* Built an end-to-end inference pipeline to generate large-scale biomass prediction maps over geographic regions
+* Performed GIS-based validation and error analysis to diagnose spatial artifacts and model failure modes
+
 ### Undergraduate Research Assistant
 
-*ECELabs, Purdue University* 
-
-Jun 2023 - Dec 2024
-
-* Built an online FPGA learning platform used by over 200 students.
-* Designed a full-stack dashboard to monitor device performance and platform usage.
-* Enhanced Diagram-to-SystemVerilog and SystemVerilog-to-Diagram translation functionality by 50x.
-* Implemented Design Rule Check and Linter to improve students' design efficiency.
-* Developed VGA and audio expansions for ICE 40 FPGA.
-
-### Undergraduate Research Assistant
-
-*Autonomous Motorsport Purdue, Purdue University* 
+*Autonomous Motorsport Purdue, Purdue University*
 
 Aug 2023 - Dec 2024
 
-* Assisted in research on computer vision models for autonomous racing.
-* Developed a high-speed lane detection algorithm, achieving 47x faster inference speed compared to YOLOv8.
-* Collaborated with the Purdue AI Racing team to integrate the algorithm into their vehicle.
+* Created an automated annotation pipeline using YOLOv8 to scale training data generation and minimize manual labeling
+* Developed a CNN-based real-time track and lane detection system for autonomous racing under extreme conditions
+* Achieved 47× faster inference than YOLOv8 with 65% fewer parameters, enabling real-time
+* deployment
+* Co-developed RoRaTrack, the first multi-camera road-racing dataset with pixel-level track annotations
+* Designed RaceGAN, a GAN-based model that outperformed 8 state-of-the-art baselines on racing scenarios
+
+### Undergraduate Research Assistant
+
+*ECELabs, Purdue University*
+
+Jun 2023 - Dec 2024
+
+* Built and maintained an online FPGA experimentation platform used by 200+ students, enabling remote hardware access and monitoring
+* Designed a full-stack dashboard to track device performance, usage metrics, and system health
+* Improved Diagram ↔ SystemVerilog translation pipelines by 50×, significantly accelerating iteration and debugging workflows
+* Implemented design-rule checks and static analysis tools to improve code correctness and development efficiency
+* Developed VGA and audio hardware extensions for ICE40 FPGA using Pmod interfaces
 
 ---
 
 ## TEACHING EXPERIENCE
 
 **Teaching Assistant**
-*Department of Computer Science, Purdue University* 
+*Department of Computer Science, Purdue University*
 
 Jan 2023 - Dec 2024
 
@@ -58,9 +73,9 @@ Jan 2023 - Dec 2024
 
 ## SELECTED PROJECTS
 
-### Senior Design
+### Senior Design Electrical Lead
 
-*Purdue University* 
+*Purdue University*
 
 Aug 2024 - Dec 2024
 
@@ -70,7 +85,7 @@ Aug 2024 - Dec 2024
 
 ### Processor Prototyping
 
-*Purdue University* 
+*Purdue University*
 
 Aug 2024 - Dec 2024
 
@@ -78,9 +93,9 @@ Aug 2024 - Dec 2024
 * Implemented multicore and cache logic, including a bus controller state machine.
 * Demonstrated improved performance for a dual-threaded program on the multicore design.
 
-### The Data Mine
+### Paris 2024 Central Planning Tool
 
-*Purdue University* 
+*The Data Mine, Purdue University*
 
 Aug 2022 - May 2023
 
@@ -114,9 +129,11 @@ Aug 2022 - May 2023
 
 ## TECHNICAL SKILLS
 
-* **Programming:** Python, PyTorch, C, SystemVerilog, Java
-* **Hardware/Tools:** RTL design, FPGA (iCE40), ESP32, STM32
-* **Languages:** English (Proficient), Mandarin (Proficient)
+* ML & Data: PyTorch, NumPy, Pandas, Rasterio, GIS (QGIS)
+* Programming: Python, C, Julia, SystemVerilog, JavaScript, MATLAB
+* Computer Vision, Deep Learning (CNNs, GANs), Segmentation
+* Systems & Hardware: Embedded ML, Jetson Nano, FPGA, RTL Design, ASIC Development
+* Languages: English, Mandarin
 
 <!--<ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
