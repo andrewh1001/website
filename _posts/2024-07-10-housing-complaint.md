@@ -1,6 +1,7 @@
 ---
 title: 'Housing, wow!'
 date: 2024-07-10
+published: false
 permalink: /posts/2024/07/housing-complaint/
 tags:
  - rant

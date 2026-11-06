@@ -1,6 +1,7 @@
 ---
 title: 'Housing Update'
 date: 2024-07-11
+published: false
 permalink: /posts/2024/07/housing-update/
 tags:
  - housing
