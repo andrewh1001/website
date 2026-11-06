@@ -1,0 +1,268 @@
+$dk-bg              : #16181b;
+$dk-surface         : #1f2226;
+$dk-surface-2       : #2a2e33;
+$dk-border          : #353a40;
+$dk-text            : #d6dade;
+$dk-text-muted      : #9aa2a9;
+$dk-heading         : #eef0f2;
+$dk-link            : #6cc4de;
+$dk-link-hover      : #a3dcec;
+$dk-link-visited    : #8fb8d6;
+
+.masthead__menu {
+  display: flex;
+  align-items: flex-start;
+
+  #site-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  padding: 0;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  background: transparent;
+  color: $masthead-link-color;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+
+  &:hover {
+    color: $masthead-link-color-hover;
+    border-color: $light-gray;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 2px;
+  }
+
+  .theme-toggle__sun { display: none; }
+  .theme-toggle__moon { display: inline; }
+}
+
+html[data-theme="dark"] .theme-toggle {
+  .theme-toggle__sun { display: inline; }
+  .theme-toggle__moon { display: none; }
+}
+
+@media screen {
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    background-color: $dk-bg;
+
+    body {
+      color: $dk-text;
+      background-color: $dk-bg;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .page__title,
+    .archive__item-title,
+    .author__name {
+      color: $dk-heading;
+    }
+
+    a { color: $dk-link; }
+    a:hover { color: $dk-link-hover; }
+    a:visited { color: $dk-link-visited; }
+
+    hr { border-top-color: $dk-border; }
+    blockquote { border-left-color: $dk-text-muted; }
+    abbr, abbr[title] { border-bottom-color: $dk-text; }
+
+    figcaption,
+    .page__meta,
+    .archive__item-excerpt,
+    .page__footer-copyright,
+    .page__footer footer {
+      color: $dk-text-muted;
+    }
+
+    figcaption a {
+      border-bottom-color: $dk-border;
+      &:hover { color: $dk-heading; border-bottom-color: $dk-heading; }
+    }
+
+    /* Images with transparent backgrounds (plots, logos) stay readable */
+    .page__content img,
+    .archive__item-teaser img {
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    /* Masthead + navigation */
+    .masthead,
+    .greedy-nav {
+      background: $dk-bg;
+    }
+    .masthead { border-bottom-color: $dk-border; }
+
+    .greedy-nav {
+      a { color: $dk-text-muted; }
+      a:hover { color: $dk-heading; }
+      .visible-links li:first-child a { color: $dk-heading; }
+      .visible-links a:before { background: $dk-link; }
+      button { background-color: $dk-surface-2; }
+
+      .hidden-links {
+        background: $dk-surface;
+        border-color: $dk-border;
+        box-shadow: 0 0 10px rgba(#000, 0.6);
+        a:hover { color: $dk-heading; background: $dk-surface-2; }
+        &:before { border-color: $dk-border transparent; }
+        &:after { border-color: $dk-surface transparent; }
+      }
+    }
+
+    .navicon,
+    .navicon:before,
+    .navicon:after {
+      background: $dk-text;
+    }
+    .close .navicon { background: transparent; }
+
+    .theme-toggle {
+      color: $dk-text-muted;
+      border-color: $dk-border;
+      &:hover { color: $dk-heading; border-color: $dk-text-muted; }
+    }
+
+    .nav__sub-title,
+    .page__related,
+    .page__comments-title,
+    .page__share,
+    .archive__subtitle,
+    .page__content table,
+    .pagination {
+      border-color: $dk-border;
+    }
+
+    .pagination--pager,
+    .pagination li a {
+      color: $dk-text-muted;
+      border-color: $dk-border;
+      &:hover { color: $dk-link-hover; }
+    }
+    .pagination li a.current {
+      color: $dk-bg;
+      background: $dk-text-muted;
+    }
+
+    .toc {
+      color: $dk-text-muted;
+      background-color: $dk-surface;
+      border-color: $dk-border;
+      .nav__title { background: $dk-surface-2; color: $dk-heading; }
+    }
+    .toc__menu a {
+      color: $dk-text-muted;
+      border-bottom-color: $dk-border;
+      &:hover { color: $dk-heading; background: $dk-surface-2; }
+    }
+
+    /* Sidebar / author profile */
+    .author__urls {
+      background: $dk-surface;
+      border-color: $dk-border;
+      &:before { border-color: $dk-border transparent; }
+      &:after { border-color: $dk-surface transparent; }
+
+      @include breakpoint($large) {
+        background: transparent;
+      }
+    }
+    .author__urls,
+    .author__urls a,
+    .author__urls .fa-solid,
+    .author__urls .fas { color: $dk-text; }
+    .author__avatar img { border-color: $dk-border; }
+    .fa-github, .fa-github-square, .fa-x-twitter, .fa-square-x-twitter,
+    .fa-threads, .fa-tiktok, .ai {
+      color: $dk-text;
+    }
+
+    .sidebar,
+    .sidebar .author__bio {
+      color: $dk-text;
+    }
+
+    /* Code */
+    code,
+    pre,
+    div.highlighter-rouge,
+    figure.highlight,
+    .highlight {
+      background-color: $dk-surface;
+      border-color: $dk-border;
+      color: $dk-text;
+    }
+    .highlight .err, .highlight .g, .highlight .l, .highlight .n,
+    .highlight .p, .highlight .ge, .highlight .go, .highlight .gp,
+    .highlight .gs, .highlight .gt, .highlight .ld, .highlight .na,
+    .highlight .nl, .highlight .nn, .highlight .nx, .highlight .py,
+    .highlight .sd, .highlight .sh, .highlight .w {
+      color: $dk-text;
+    }
+
+    /* Tables */
+    table, td, th { border-color: $dk-border; }
+    thead { background-color: $dk-surface-2; border-bottom-color: $dk-border; }
+
+    /* Footer */
+    .page__footer {
+      color: $dk-text-muted;
+      background-color: $dk-surface;
+      border-top-color: $dk-border;
+      a { color: $dk-text-muted; }
+      a:hover { color: $dk-heading; }
+    }
+
+    /* Archive cards / taxonomy */
+    .archive__item-teaser,
+    .page__taxonomy-item {
+      border-color: $dk-border;
+    }
+
+    /* Buttons */
+    .btn,
+    .btn--inverse {
+      color: $dk-heading !important;
+      background-color: $dk-surface-2;
+      border-color: $dk-border !important;
+    }
+    .btn:hover { background-color: $dk-border; }
+
+    /* Notices */
+    .notice,
+    .notice--primary,
+    .notice--info,
+    .notice--warning,
+    .notice--success,
+    .notice--danger {
+      color: $dk-text;
+      background-color: $dk-surface;
+    }
+
+    /* Forms, wells, modals */
+    input, textarea, select,
+    .form, .well, .modal,
+    .page__comments-form,
+    .skip-link:focus {
+      color: $dk-text;
+      background-color: $dk-surface;
+      border-color: $dk-border;
+    }
+    .show-modal:before { background-color: rgba($dk-bg, 0.85); }
+  }
+}
