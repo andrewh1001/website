@@ -39,7 +39,7 @@ html[data-theme="dark"] .itri-viz { --viz-text: #d6dade; --viz-muted: #9aa2a9; -
 
 A reinforcement-learning locomotion policy for the Unitree Go2 quadruped. From one small forward depth camera (16 × 16 pixels) and its own joint sensors, the robot learns to climb stairs, jump onto and off a 40 cm box, leap gaps up to 0.9 m and cross narrow beams. The goal was to improve the Go2's real-world performance on tasks like stairs and obstacles, so every skill was trained in Isaac Gym, checked sim-to-sim in Gazebo through the robot's C++ controller, and then run on the real robot.
 
-*Research internship at ITRI (Industrial Technology Research Institute), Taiwan, June to October 2026.*
+*Research internship at ITRI (Industrial Technology Research Institute), Taiwan, May to October 2026.*
 
 **My role:** I built the training environment (procedural terrains, reward functions, curriculum and domain randomization for every skill) and the GRU memory module that carries terrain across frames. I also reworked the deployment pipeline: the existing sim-to-sim and real-robot code was written for another model, so I adapted the export, depth preprocessing and controller to this policy.
 
